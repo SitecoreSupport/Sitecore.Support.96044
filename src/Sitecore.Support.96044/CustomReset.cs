@@ -3,12 +3,12 @@ using Sitecore.Data.Items;
 using Sitecore.Diagnostics;
 using Sitecore.Shell.Framework.Commands;
 using Sitecore.Shell.Framework.Commands.Masters;
-using System;
+using ResetOrigin = Sitecore.Shell.Applications.Layouts.PageDesigner.Commands.Reset;
 
 namespace Sitecore.Support.Shell.Applications.Layouts.PageDesigner.Commands
 {
-    public class CustomReset : Reset
-    {
+    public class CustomReset : ResetOrigin
+	{
         public override CommandState QueryState(CommandContext context)
         {
             Assert.ArgumentNotNull(context, "context");
